@@ -16,7 +16,6 @@
 package dax
 
 import (
-	"github.com/aws/aws-dax-go/dax/internal/client"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
@@ -358,6 +357,28 @@ func (d *Dax) DescribeEndpointsRequest(*dynamodb.DescribeEndpointsInput) (r *req
 	d.unImpl()
 	return
 }
+
+func (d *Dax) TransactGetItems(*dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error){
+	return nil, d.unImpl()
+}
+func (d *Dax) TransactGetItemsWithContext(aws.Context, *dynamodb.TransactGetItemsInput, ...request.Option) (*dynamodb.TransactGetItemsOutput, error){
+	return nil, d.unImpl()
+}
+func (d *Dax) TransactGetItemsRequest(*dynamodb.TransactGetItemsInput) (*request.Request, *dynamodb.TransactGetItemsOutput){
+	return nil, nil
+}
+
+func (d *Dax) TransactWriteItems(*dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error){
+	return nil, d.unImpl()
+}
+func (d *Dax) TransactWriteItemsWithContext(aws.Context, *dynamodb.TransactWriteItemsInput, ...request.Option) (*dynamodb.TransactWriteItemsOutput, error){
+	return nil, d.unImpl()
+}
+func (d *Dax) TransactWriteItemsRequest(*dynamodb.TransactWriteItemsInput) (*request.Request, *dynamodb.TransactWriteItemsOutput){
+	return nil, nil
+}
+
+
 
 func (d *Dax) DescribeGlobalTable(*dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
 	return nil, d.unImpl()
