@@ -347,15 +347,16 @@ func (d *Dax) DescribeContinuousBackupsRequest(*dynamodb.DescribeContinuousBacku
 }
 
 func (d *Dax) DescribeEndpoints(*dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
-	return nil,d.unImpl()
+	return nil, d.unImpl()
 }
 
-func (d *Dax) DescribeEndpointsWithContext(aws.Context, *dynamodb.DescribeEndpointsInput, ...request.Option) (*dynamodb.DescribeEndpointsOutput, error){
-	return nil,d.unImpl()
+func (d *Dax) DescribeEndpointsWithContext(aws.Context, *dynamodb.DescribeEndpointsInput, ...request.Option) (*dynamodb.DescribeEndpointsOutput, error) {
+	return nil, d.unImpl()
 }
 
-func (d *Dax) DescribeEndpointsRequest(*dynamodb.DescribeEndpointsInput) (*request.Request, *dynamodb.DescribeEndpointsOutput){
-	return nil,nil
+func (d *Dax) DescribeEndpointsRequest(*dynamodb.DescribeEndpointsInput) (r *request.Request, o *dynamodb.DescribeEndpointsOutput) {
+	d.unImpl()
+	return
 }
 
 func (d *Dax) DescribeGlobalTable(*dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
